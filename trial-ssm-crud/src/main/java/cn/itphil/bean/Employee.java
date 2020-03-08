@@ -11,7 +11,20 @@ public class Employee {
 
     private String address;
 
-    public Integer getId() {
+    public Employee(Integer id, Integer age, String username, String sax, String address) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.username = username;
+		this.sax = sax;
+		this.address = address;
+	}
+
+	public Employee() {
+		super();
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -50,4 +63,12 @@ public class Employee {
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
     }
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", age=" + age + ", username=" + username + ", sax=" + sax + ", address="
+				+ address + "]";
+	}
+    
+    
 }
